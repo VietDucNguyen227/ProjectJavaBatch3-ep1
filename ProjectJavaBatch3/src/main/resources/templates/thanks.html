@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/frag :: head">
+</head>
+<body>
+<style>
+    .container .title{
+        font-size: 3.5rem;
+        color: #624f0c;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+</style>
+<div th:replace="layout/frag :: navbar"></div>
+<br><br><br><br>
+<div class="container my-2">
+    <div class="row">
+        <div class="col-sm-10">
+            <h3 class="title"> Thank You For Buying Our Products !!! </h3>
+        </div>
+    </div>
+</div>
+<div th:replace="layout/frag :: footer"></div>
+<div th:replace="layout/frag :: script"></div>
+</body>
+</html>

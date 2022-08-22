@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+        <title>Milk Tee</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+        <link rel="stylesheet" th:href="@{/css/open-iconic-bootstrap.min.css}">
+        <link rel="stylesheet" th:href="@{css/animate.css}">
+        <link rel="stylesheet" th:href="@{css/owl.carousel.min.css}">
+        <link rel="stylesheet" th:href="@{css/owl.theme.default.min.css}">
+        <link rel="stylesheet" th:href="@{css/magnific-popup.css}">
+        <link rel="stylesheet" th:href="@{css/aos.css}">
+        <link rel="stylesheet" th:href="@{css/ionicons.min.css}">
+        <link rel="stylesheet" th:href="@{css/bootstrap-datepicker.css}">
+        <link rel="stylesheet" th:href="@{css/jquery.timepicker.css}">
+        <link rel="stylesheet" th:href="@{css/flaticon.css}">
+        <link rel="stylesheet" th:href="@{css/icomoon.css}">
+        <link rel="stylesheet" th:href="@{css/style.css}">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<div th:fragment="navbar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+                <div class="container">
+                        <a class="navbar-brand" th:href="@{/}">Milk Tee<small>Towo Gowo</small></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="oi oi-menu"></span> Menu
+                        </button>
+                        <div class="collapse navbar-collapse" id="ftco-nav">
+                                <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item active"><a th:href="@{/}" class="nav-link">Home</a></li>
+                                        <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="room.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
+                                                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                                        <a class="dropdown-item" th:href="@{/login}">Staff Login</a>
+                                                        <a class="dropdown-item" th:href="@{/admin/listItem}">Item</a>
+                                                        <a class="dropdown-item" th:href="@{/admin/listStaff}">Staff</a>
+                                                        <a class="dropdown-item" th:href="@{/admin/listOrders}">Orders</a>
+                                                        <a class="dropdown-item" th:href="@{/admin/listOrderItem}">Order Item</a>
+                                                </div>
+                                        <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="room.html" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News</a>
+                                                <div class="dropdown-menu" aria-labelledby="dropdown03">
+                                                        <a class="dropdown-item" th:href="@{/sale}">Sale</a>
+                                                        <a class="dropdown-item" th:href="@{/event}">Event</a>
+                                                </div>
+                                        <li class="nav-item"><a th:href="@{/about}" class="nav-link">About</a></li>
+                                        <li class="nav-item"><a th:href="@{/blog}" class="nav-link">Blog</a></li>
+                                        <li class="nav-item"><a th:href="@{/recruit}" class="nav-link">Recruit</a></li>
+                                </ul>
+                        </div>
+                </div>
+        </nav>
+</div>
+<div th:fragment="footer">
+        <footer class="ftco-footer ftco-section img">
+                <div class="overlay"></div>
+                <div class="container">
+                        <div class="row mb-5">
+                                <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+                                        <div class="ftco-footer-widget mb-4">
+                                                <h2 class="ftco-heading-2">About Us</h2>
+                                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                                <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                                                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                                                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                                                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                                                </ul>
+                                        </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
+                                        <div class="ftco-footer-widget mb-4">
+                                                <h2 class="ftco-heading-2">Recent Blog</h2>
+                                                <div class="block-21 mb-4 d-flex">
+                                                        <a class="blog-img mr-4" style="background-image: url(https://images.pexels.com/photos/6412836/pexels-photo-6412836.jpeg?auto=compress&cs=tinysrgb&w=600);"></a>
+                                                        <div class="text">
+                                                                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                                                                <div class="meta">
+                                                                        <div><a href="#"><span class="icon-calendar"></span> Sept 15, 2018</a></div>
+                                                                        <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                                                                        <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="block-21 mb-4 d-flex">
+                                                        <a class="blog-img mr-4" style="background-image: url(https://images.pexels.com/photos/4071422/pexels-photo-4071422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);"></a>
+                                                        <div class="text">
+                                                                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                                                                <div class="meta">
+                                                                        <div><a href="#"><span class="icon-calendar"></span> Sept 15, 2018</a></div>
+                                                                        <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                                                                        <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
+                                        <div class="ftco-footer-widget mb-4 ml-md-4">
+                                                <h2 class="ftco-heading-2">Services</h2>
+                                                <ul class="list-unstyled">
+                                                        <li><a href="#" class="py-2 d-block">Cooked</a></li>
+                                                        <li><a href="#" class="py-2 d-block">Deliver</a></li>
+                                                        <li><a href="#" class="py-2 d-block">Quality Foods</a></li>
+                                                        <li><a href="#" class="py-2 d-block">Mixed</a></li>
+                                                </ul>
+                                        </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+                                        <div class="ftco-footer-widget mb-4">
+                                                <h2 class="ftco-heading-2">Have a Questions?</h2>
+                                                <div class="block-23 mb-3">
+                                                        <ul>
+                                                                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+                                                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+                                                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                                                        </ul>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </footer>
+</div>
+<div th:fragment="script">
+        <script type="text/javascript" th:src="@{js/jquery.min.js}"></script>
+        <script type="text/javascript" th:src="@{js/jquery-migrate-3.0.1.min.js}"></script>
+        <script type="text/javascript" th:src="@{js/popper.min.js}"></script>
+        <script type="text/javascript" th:src="@{js/bootstrap.min.js}"></script>
+        <script type="text/javascript" th:src="@{js/jquery.easing.1.3.js}"></script>
+        <script type="text/javascript" th:src="@{js/jquery.waypoints.min.js}"></script>
+        <script type="text/javascript" th:src="@{js/jquery.stellar.min.js}"></script>
+        <script type="text/javascript" th:src="@{js/owl.carousel.min.js}"></script>
+        <script type="text/javascript" th:src="@{js/jquery.magnific-popup.min.js}"></script>
+        <script type="text/javascript" th:src="@{js/aos.js}"></script>
+        <script type="text/javascript" th:src="@{js/jquery.animateNumber.min.js}"></script>
+        <script type="text/javascript" th:src="@{js/bootstrap-datepicker.js}"></script>
+        <script type="text/javascript" th:src="@{js/jquery.timepicker.min.js}"></script>
+        <script type="text/javascript" th:src="@{js/scrollax.min.js}"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+        <script type="text/javascript" th:src="@{js/google-map.js}"></script>
+        <script type="text/javascript" th:src="@{js/main.js}"></script>
+</div>
+</html>

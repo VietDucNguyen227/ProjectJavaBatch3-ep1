@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/frag :: head">
+</head>
+<body>
+<style>
+    .container .title{
+        font-size: 3.5rem;
+        color: #624f0c;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+</style>
+<div th:replace="layout/frag :: navbar"></div>
+<br><br><br><br>
+<div class="container my-2">
+    <div class="row">
+        <div class="col-sm-10">
+            <h3 class="title"> Cart </h3>
+            <form th:action="@{/cart/update}" method="post">
+            <table border="1" class = "table table-striped table-responsive-md">
+                <thead>
+                <tr>
+                    <th class="col-md-2">Option</th>
+                    <th class="col-md-2">ID</th>
+                    <th class="col-md-2">Name</th>
+                    <th class="col-md-2">Price</th>
+                    <th class="col-md-2">
+                        Quantity
+                        <input type="submit" value="Update"/>
+                    </th>
+                    <th class="col-md-2">Sub Total</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="col-md-2" th:each="cartitem: ${session.cart}">
+                    <td align="center">
+                        <a th:href="${'/cart/remove/' + cartitem.item.id}"> X </a>
+                    </td>
+                    <td class="col-md-2" th:text="${cartitem.item.id}"></td>
+                    <td class="col-md-2" th:text="${cartitem.item.name}"></td>
+                    <td class="col-md-2" th:text="${cartitem.item.price}"></td>
+                    <td class="col-md-2">
+                        <input type="number" th:value="${cartitem.quantity}" name="quantity" style="width: 50px;"/>
+                    </td>
+                    <td class="col-md-2" th:text="${cartitem.item.price * cartitem.quantity}"></td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        Total
+                    </td>
+                    <td th:text="${total}"></td>
+                </tr>
+                </tbody>
+            </table>
+            </form>
+            <br>
+            <a th:href="${'/showItem'}">Continue Buying</a> |
+            <a th:href="${'/cart/checkout'}">Check Out</a>
+        </div>
+    </div>
+
+
+</div>
+<div th:replace="layout/frag :: footer"></div>
+<div th:replace="layout/frag :: script"></div>
+</body>
+</html>

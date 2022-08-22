@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>Welcome to Our Site</title>
+</head>
+<body>
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div >
+                        <h2>Create New Order</h2>
+
+                                <form action="/createOrderInfoDone" method="post" >
+
+                                <label>Enter Staff Name</label>
+                                <input type="text" name="staffName">
+                                <br>
+
+                                <label>Enter Order ID</label>
+                                <input type="text" name="orderId">
+                                <br>
+
+                                <label>Enter Item Name</label>
+                                <input type="text" name="itemName">
+                                <br>
+
+                                <label>Enter Drink Type</label>
+                                <input type="text" name="type">
+                                <br>
+
+                                <label>Enter Quantity</label>
+                                <input type="text" name="quantity">
+                                <br>
+
+                                <label>Enter Customer Name</label>
+                                <input type="text" name="customerName">
+                                <br>
+
+                                <label>Enter Customer Phone</label>
+                                <input type="text" name="customerPhone">
+                                <br>
+
+                                <label>Enter Address</label>
+                                <input type="text" name="address">
+                                <br>
+
+                                <label>Enter Date Checkin</label>
+                                <input type="text" name="dateCheckIn">
+                                <br>
+
+                                <label>Enter Status</label>
+                                <input type="text" name="status">
+                                <br>
+                                <button type="submit">Save</button>
+                                </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+</div>
+</body>
+
+</html>
