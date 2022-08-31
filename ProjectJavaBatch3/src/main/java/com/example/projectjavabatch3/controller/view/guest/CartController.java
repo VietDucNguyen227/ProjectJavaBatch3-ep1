@@ -97,9 +97,10 @@ public class CartController {
             return "redirect:/";
         }else{
             //add orders
-            Orders orders = new Orders();
+           Orders orders = new Orders();
             orders.setUsers(user);
             orders.setUsername(user.getUsername());
+            orders.setAddress(user.getAddress());
             orders.setDateCheckIn(new Date());
             orders.setStatus(0);
             ordersService.saveOrders(orders);
