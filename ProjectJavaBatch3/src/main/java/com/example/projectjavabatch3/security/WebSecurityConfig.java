@@ -39,6 +39,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+                //JWT
+//        http.cors().and().csrf().disable()
+//                .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
+//                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+//                .authorizeRequests().antMatchers("/api/auth/**").permitAll();
+//        http.addFilterBefore(authenticationJwtTokenFilter(),
+//                UsernamePasswordAuthenticationFilter.class);
+        
         http.csrf().disable();
 
         // Các trang không yêu cầu login
