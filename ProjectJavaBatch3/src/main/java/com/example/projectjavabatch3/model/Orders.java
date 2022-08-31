@@ -23,6 +23,8 @@ public class Orders implements java.io.Serializable {
     private int status;
     @Column(name = "username")
     private String username;
+    @Column(name = "address")
+    private String address;
 
 
     @OneToOne
@@ -69,6 +71,14 @@ public class Orders implements java.io.Serializable {
 
     public void setStatus(int status) {
         this.status = status;
+    }
+    
+      public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
 //    @Override
